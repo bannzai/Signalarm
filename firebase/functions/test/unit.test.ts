@@ -50,8 +50,9 @@ describe("Crashlytics のアラートの投稿先 Slack チャンネル", () => 
     } as unknown as Parameters<typeof crashlyticsNewFatalIssueToSlack.run>[0]);
 
     expect(fetchMock).toHaveBeenCalledTimes(1);
-    const [, init] = fetchMock.mock.calls[0] as unknown as [string, RequestInit];
-    expect(JSON.parse(init.body as string).channel).toBe(NOTIFICATION_SLACK_CHANNEL);
+    expect(
+      JSON.parse((fetchMock.mock.calls[0] as unknown as [string, RequestInit])[1].body as string).channel,
+    ).toBe(NOTIFICATION_SLACK_CHANNEL);
   });
 });
 
