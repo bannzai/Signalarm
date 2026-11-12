@@ -35,7 +35,7 @@
     "@types/node": "^26.6.5",
     "@types/supertest": "^7.2.1",
     "eslint": "^10.13.0",
-    "firebase": "^12.19.0",
+    "firebase": "^13.1.0",
     "firebase-tools": "^15.34.1",
     "globals": "^17.13.0",
     "supertest": "^7.3.1",
